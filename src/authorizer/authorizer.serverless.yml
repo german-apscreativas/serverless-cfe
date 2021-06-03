@@ -1,0 +1,2 @@
+authorizerFunc:
+  handler: src/authorizer/handler.authorizer
