@@ -64,7 +64,7 @@ export async function getMedidorById(event) {
 }
 
 export async function createMedidor(event) {
-    const body = parse(event.body);
+    const body = JSON.parse(event.body);
     try {
         let newMedidor = {
             TableName: tableMedidor,

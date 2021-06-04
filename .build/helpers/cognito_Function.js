@@ -76,7 +76,7 @@ function signUpUser(_a) {
                         ClientId: clientId,
                         Password: password,
                         Username: username,
-                        SecretHash: generateHash(username),
+                        //SecretHash: generateHash(username),
                         UserAttributes: userAttr
                     };
                     _b.label = 1;

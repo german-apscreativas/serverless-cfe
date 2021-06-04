@@ -62,7 +62,7 @@ export async function signUpUser({ username, password, role, userAttr }: signUp)
         ClientId: clientId,
         Password: password,
         Username: username,
-        SecretHash: generateHash(username),
+        //SecretHash: generateHash(username),
         UserAttributes: userAttr
     };
 

@@ -4,7 +4,7 @@ export class PolicyIamManager {
     getPolicy(principalId: any, effect: string, resource: any) {
         const authResponse:any = {};
     
-    authResponse.principalId = principalId;
+    // authResponse.principalId = principalId;
     if (effect && resource) {
         const  policyDocument: any = {};
         policyDocument.Version = '2012-10-17'; 

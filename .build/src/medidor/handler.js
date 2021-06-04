@@ -39,7 +39,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.deleteMedidor = exports.upMedidor = exports.createMedidor = exports.getMedidorById = exports.getMedidor = void 0;
 var aws_sdk_1 = require("aws-sdk");
 var uuid_1 = require("uuid");
-var query_string_1 = require("query-string");
 var dynamoDB = new aws_sdk_1.DynamoDB.DocumentClient();
 var tableMedidor = process.env.tableMedidor;
 var functionMedidor_1 = require("./functionMedidor");
@@ -129,7 +128,7 @@ function createMedidor(event) {
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
-                    body = query_string_1.parse(event.body);
+                    body = JSON.parse(event.body);
                     _a.label = 1;
                 case 1:
                     _a.trys.push([1, 3, , 4]);

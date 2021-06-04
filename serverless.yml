@@ -36,6 +36,7 @@ provider:
   environment: 
     tableUser: "users"
     tableMedidor: "medidor"
+    userPoolId: "us-east-1_A47pkdpzZ"
   iambdaHashingVersion: "20201221"
   iam.role.statements: 
     - Effect: Allow
@@ -98,7 +99,6 @@ functions:
       - http:
           path: medidor
           method: get
-          authorizer: authorizerFunc
   getmedidorById: 
     handler: src/medidor/handler.getMedidorById
     events:

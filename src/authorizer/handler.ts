@@ -5,6 +5,7 @@ import { PolicyIamManager } from '../../helpers/policyIamManager';
 let publicKey: any = null;
 
 export async function authorizer(event: any, context: any, callback: any) {
+    console.log("hola mundo que tal a todos")
     console.log(event.methodArn);
     
 
@@ -17,10 +18,9 @@ export async function authorizer(event: any, context: any, callback: any) {
 
     // const token = await  authorizerMagager.getToken(event.authorizationToken.split(" ")[1]);
     const token = await validateToken({ token: event.authorizationToken.split(" ")[1], publicKey })
+    console.log("hola que talr")
     if (!token.isValid) return { err: "Token no valido" }
-    console.log("Handler Token", token)
-    console.log(token.roles[0]);
-    
+    console.log("Estoy aqui", event.methodArn)
     let role = token.roles[0];
         switch (role) {
             case 'ADMIN':
